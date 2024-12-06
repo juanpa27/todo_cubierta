@@ -2,69 +2,53 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { MessageCircleMore  } from 'lucide-react'
+import { MessageCircleMore } from 'lucide-react'
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-base-100 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="relative z-10 pb-8 bg-base-100 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-          <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <div className="sm:text-center lg:text-left">
-                <h1 className="text-4xl font-roboto font-extrabold text-base-content sm:text-5xl md:text-6xl">
-                  <span className="block xl:inline">Todo Cubierta</span>{" "}
-                 
-                </h1>
-                <h2 className="text-3xl font-roboto font-bold text-primary sm:text-5xl md:text-6xl">
-                  <span className="block text-primary xl:inline">
-                    Líderes en cubiertas para todo tipo de vehículos.
-                  </span>
-                </h2>
-                <p className="mt-3 text-base font-roboto text-base-content/70 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Te ofrecemos las mejores marcas, calidad garantizada y un servicio 
-                  que se adapta a tus necesidades.
-                </p>
-                <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                  <div className="rounded-md shadow">
-                    <Link href="/marcas" className="btn btn-primary">
-                      Ver Marcas
-                    </Link>
-                  </div>
-                  <div className="mt-3 sm:mt-0 sm:ml-3">
-                    <Link
-                      href="https://wa.me/1234567890"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-outline btn-secondary flex items-center gap-2"
-                    >
-                      <MessageCircleMore className="w-5 h-5" />
-                      Contáctanos
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <div className="hero min-h-screen relative">
+      <Image
+        src="/images/header/header-large.webp"
+        alt="Cubiertas de alta calidad"
+        layout="fill"
+        objectFit="cover"
+        priority
+        sizes="100vw"
+        className="hero-background"
+      />
+      <div className="hero-overlay bg-opacity-60"></div>
+      <div className="hero-content text-center text-neutral-content z-10">
+        <div className="max-w-3xl">
+          <h1 className="mb-2 text-5xl font-oswald font-extrabold text-white sm:text-6xl md:text-7xl">
+            <span className="block xl:inline text-shadow-glow">Todo Cubierta</span>
+          </h1>
+          <h2 className="mb-5 text-3xl font-roboto font-bold text-primary sm:text-4xl md:text-5xl">
+            <span className="block xl:inline">
+              Líderes en cubiertas para todo tipo de vehículos.
+            </span>
+          </h2>
+          <p className="mb-5 text-lg font-roboto text-white sm:text-xl md:text-2xl">
+            Te ofrecemos las mejores marcas, calidad garantizada y un servicio 
+            que se adapta a tus necesidades.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link href="/marcas" className="btn btn-primary btn-lg">
+              Ver Marcas
+            </Link>
+            <Link
+              href="https://wa.me/1234567890"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline btn-secondary btn-lg flex items-center gap-2"
+            >
+              <MessageCircleMore className="w-6 h-6" />
+              Contáctanos
+            </Link>
           </div>
         </div>
       </div>
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <Image
-          className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="/images/header/header-large.webp"
-          alt="Cubiertas de alta calidad"
-          layout="fill"
-          objectFit="cover"
-          priority
-          sizes="(max-width: 768px) 768px, 
-               (max-width: 1024px) 1024px, 
-               1920px"
-          srcSet=" 
-          /images/header/header-small.webp 768w,
-          /images/header/header-medium.webp 1024w,
-          /images/header/header-large.webp 1920w"
-        />
-      </div>
-    </section>
+    </div>
+    
   );
 }
+

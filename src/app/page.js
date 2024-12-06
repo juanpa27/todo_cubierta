@@ -1,11 +1,12 @@
 import HeroSection from './components/HeroSection'
+import BrandCards from './components/BrandCards'
 
 export default function Home() {
   return (
-    <div>
+    <>
       <HeroSection />
-      
-    </div>
+      <BrandCards />
+    </>
   )
 }
 

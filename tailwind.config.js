@@ -11,6 +11,7 @@ module.exports = {
         oswald: ['Oswald', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
         bebas: ['Bebas Neue', 'cursive'],
+        noto : ['Noto Sans', 'sans-serif'],
       },
     },
   },
