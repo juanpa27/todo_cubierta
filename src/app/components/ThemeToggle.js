@@ -7,6 +7,7 @@ export default function ThemeToggle() {
   const [theme, setTheme] = useState('light')
 
   useEffect(() => {
+    // Recuperar el tema guardado o usar 'light' como predeterminado
     const savedTheme = localStorage.getItem('theme') || 'light'
     setTheme(savedTheme)
     document.documentElement.setAttribute('data-theme', savedTheme)
@@ -20,15 +21,16 @@ export default function ThemeToggle() {
   }
 
   return (
-    <label className="swap swap-rotate">
-      <input 
-        type="checkbox" 
-        onChange={toggleTheme}
-        checked={theme === 'dark'}
-      />
-      <Sun className="swap-on fill-current w-6 h-6" />
-      <Moon className="swap-off fill-current w-6 h-6" />
-    </label>
+    <button
+      onClick={toggleTheme}
+      className="btn btn-circle btn-ghost"
+      aria-label="Toggle theme"
+    >
+      {theme === 'dark' ? (
+        <Sun className="h-5 w-5 text-yellow-500" />
+      ) : (
+        <Moon className="h-5 w-5 text-gray-900" />
+      )}
+    </button>
   )
 }
-

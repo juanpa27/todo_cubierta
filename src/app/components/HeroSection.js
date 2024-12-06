@@ -1,76 +1,70 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
+import { MessageCircleMore  } from 'lucide-react'
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-gray-50 overflow-hidden">
+    <section className="relative bg-base-100 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="relative z-10 pb-8 bg-gray-50 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }}
-            className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden"
-          >
+        <div className="relative z-10 pb-8 bg-base-100 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+          <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="sm:text-center lg:text-left">
-                <motion.h1 
-                  className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2, duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }}
-                >
-                  <span className="block xl:inline">Todo Cubierta:</span>{' '}
-                  <span className="block text-primary xl:inline">La mejor protección para tus ruedas</span>
-                </motion.h1>
-                <motion.p 
-                  className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4, duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }}
-                >
-                  Ofrecemos una amplia gama de cubiertas de las mejores marcas para todo tipo de vehículos. Calidad y servicio garantizado.
-                </motion.p>
-                <motion.div 
-                  className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6, duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }}
-                >
+                <h1 className="text-4xl font-roboto font-extrabold text-base-content sm:text-5xl md:text-6xl">
+                  <span className="block xl:inline">Todo Cubierta</span>{" "}
+                 
+                </h1>
+                <h2 className="text-3xl font-roboto font-bold text-primary sm:text-5xl md:text-6xl">
+                  <span className="block text-primary xl:inline">
+                    Líderes en cubiertas para todo tipo de vehículos.
+                  </span>
+                </h2>
+                <p className="mt-3 text-base font-roboto text-base-content/70 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                  Te ofrecemos las mejores marcas, calidad garantizada y un servicio 
+                  que se adapta a tus necesidades.
+                </p>
+                <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
-                    <Link href="/marcas" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-focus md:py-4 md:text-lg md:px-10">
+                    <Link href="/marcas" className="btn btn-primary">
                       Ver Marcas
                     </Link>
                   </div>
                   <div className="mt-3 sm:mt-0 sm:ml-3">
-                    <Link href="/contacto" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
+                    <Link
+                      href="https://wa.me/1234567890"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-outline btn-secondary flex items-center gap-2"
+                    >
+                      <MessageCircleMore className="w-5 h-5" />
                       Contáctanos
                     </Link>
                   </div>
-                </motion.div>
+                </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-      <motion.div 
-        className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.8, duration: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
-      >
+      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <Image
           className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src="/hero-image.jpg"
+          src="/images/header/header-large.webp"
           alt="Cubiertas de alta calidad"
-          width={1000}
-          height={1000}
+          layout="fill"
+          objectFit="cover"
+          priority
+          sizes="(max-width: 768px) 768px, 
+               (max-width: 1024px) 1024px, 
+               1920px"
+          srcSet=" 
+          /images/header/header-small.webp 768w,
+          /images/header/header-medium.webp 1024w,
+          /images/header/header-large.webp 1920w"
         />
-      </motion.div>
+      </div>
     </section>
-  )
+  );
 }
-
