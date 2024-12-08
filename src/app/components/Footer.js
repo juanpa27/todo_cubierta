@@ -3,7 +3,7 @@ import { MdEmail, MdLocationOn, MdPhone } from 'react-icons/md';
 
 export default function Footer() {
   return (
-    <footer className="bg-base-200 text-base-content">
+    <footer className="bg-base-300 text-base-content">
       <div className="container mx-auto px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Contact Information */}
@@ -31,13 +31,13 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-bold mb-4">Síguenos</h3>
             <div className="flex gap-4">
-              <a href="https://www.facebook.com/todo.cubierta" target="_blank" className="text-2xl hover:text-primary transition-colors" aria-label="Facebook">
+              <a href="#" className="text-2xl hover:text-primary transition-colors" aria-label="Facebook">
                 <FaFacebook />
               </a>
-              <a href="https://www.instagram.com/todocubierta/?hl=es-la" target="_blank" className="text-2xl hover:text-primary transition-colors" aria-label="Instagram">
+              <a href="#" className="text-2xl hover:text-primary transition-colors" aria-label="Instagram">
                 <FaInstagram />
               </a>
-              <a href="https://api.whatsapp.com/send?phone=595985469000" target='_blank' className="text-2xl hover:text-primary transition-colors" aria-label="WhatsApp">
+              <a href="#" className="text-2xl hover:text-primary transition-colors" aria-label="WhatsApp">
                 <FaWhatsapp />
               </a>
             </div>
@@ -48,7 +48,7 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4">Ubicación</h3>
             <div className="w-full h-64 rounded-lg overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.5721120211387!2d-57.59185882374034!3d-25.334631777700804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da90368f340cd%3A0xfd23f1cbae783751!2sTODO%20CUBIERTA%20S.R.L.!5e0!3m2!1sen!2sus!4v1701896358099!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14424.37593617062!2d-57.5892791!3d-25.3346271!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da90368f340cd%3A0xfd23f1cbae783751!2sTODO%20CUBIERTA%20S.R.L.!5e0!3m2!1ses-419!2spy!4v1733694874008!5m2!1ses-419!2spy" 
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
