@@ -2,6 +2,8 @@
 
 import Image from 'next/image'
 import { MapPin, Clock, Phone, Ship, AlertTriangle, ExternalLink, Navigation } from 'lucide-react'
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 export default function ArgentinaInfo() {
   return (
@@ -15,15 +17,17 @@ export default function ArgentinaInfo() {
 
           {/* Mapa y información principal */}
           <div className="grid lg:grid-cols-2 gap-8 mb-8">
-            {/* Mapa */}
+            {/* Mapa con zoom */}
             <div className="relative h-[300px] lg:h-[400px] rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src="/desde_argentina.webp"
-                alt="Mapa del trayecto en balsa desde Puerto Pilcomayo (Argentina) a Puerto Ita Enramada (Paraguay)"
-                fill
-                className="object-cover"
-                priority
-              />
+              <Zoom>
+                <Image
+                  src="/desde_argentina.webp"
+                  alt="Mapa del trayecto en balsa desde Puerto Pilcomayo (Argentina) a Puerto Ita Enramada (Paraguay)"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </Zoom>
             </div>
 
             {/* Información del trayecto */}
