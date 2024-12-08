@@ -52,7 +52,7 @@ export default function Header() {
                 <Link href="/about">Servicios</Link>
               </li>
               <li>
-                <Link href="/about">Nosotros</Link>
+                <Link href="/nosotros">Nosotros</Link>
               </li>
               <li>
                 <Link href="/contacto">Contacto</Link>
@@ -89,7 +89,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/about"
+                href="/nosotros"
                 className={`btn btn-ghost ${isScrolled ? "btn-sm" : ""}`}
               >
                 Nosotros
