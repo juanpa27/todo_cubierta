@@ -42,7 +42,7 @@ export default function Header() {
           <Link href="/" className="flex items-center">
             <Image
               src={resolvedTheme === 'dark' ? "/logo_light.webp" : "/logo_dark.webp"}
-              alt="Todo Cubierta Logo"
+              alt="Todo Cubierta Logo"ñ
               width={isScrolled ? 150 : 180}
               height={isScrolled ? 150 : 180} 
               className="mr-3 transition-all duration-300"
