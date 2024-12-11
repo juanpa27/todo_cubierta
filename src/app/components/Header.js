@@ -36,6 +36,7 @@ export default function Header() {
               <li><Link href="/marcas">Marcas</Link></li>
               <li><Link href="/servicios">Servicios</Link></li>
               <li><Link href="/nosotros">Nosotros</Link></li>
+              <li><Link href="/articulos">Información útil</Link></li>
               <li><Link href="/contacto">Contacto</Link></li>
             </ul>
           </div>
@@ -54,6 +55,7 @@ export default function Header() {
             <li><Link href="/marcas" className={`btn btn-ghost text-base-content ${isScrolled ? 'btn-sm' : ''}`}>Marcas</Link></li>
             <li><Link href="/servicios" className={`btn btn-ghost text-base-content ${isScrolled ? 'btn-sm' : ''}`}>Servicios</Link></li>
             <li><Link href="/nosotros" className={`btn btn-ghost text-base-content ${isScrolled ? 'btn-sm' : ''}`}>Nosotros</Link></li>
+            <li><Link href="/articulos" className={`btn btn-ghost text-base-content ${isScrolled ? 'btn-sm' : ''}`}>Información útil</Link></li>
             <li><Link href="/contacto" className={`btn btn-ghost text-base-content ${isScrolled ? 'btn-sm' : ''}`}>Contacto</Link></li>
           </ul>
         </div>
