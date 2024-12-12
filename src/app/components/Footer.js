@@ -2,6 +2,9 @@ import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { MdEmail, MdLocationOn, MdPhone } from 'react-icons/md';
 
 export default function Footer() {
+  const whatsappMessage = encodeURIComponent("Hola, me gustaría obtener más información sobre sus servicios de cubiertas.");
+  const whatsappLink = `https://api.whatsapp.com/send?phone=595985469000&text=${whatsappMessage}`;
+
   return (
     <footer className="bg-base-300 text-base-content">
       <div className="container mx-auto px-4 py-10">
@@ -31,13 +34,13 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-bold mb-4">Síguenos</h3>
             <div className="flex gap-4">
-              <a href="#" className="text-2xl hover:text-primary transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/todo.cubierta" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-primary transition-colors" aria-label="Facebook">
                 <FaFacebook />
               </a>
-              <a href="#" className="text-2xl hover:text-primary transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/todocubierta/?hl=es-la" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-primary transition-colors" aria-label="Instagram">
                 <FaInstagram />
               </a>
-              <a href="#" className="text-2xl hover:text-primary transition-colors" aria-label="WhatsApp">
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-primary transition-colors" aria-label="WhatsApp">
                 <FaWhatsapp />
               </a>
             </div>

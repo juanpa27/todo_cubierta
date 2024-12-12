@@ -43,7 +43,7 @@ export default function ServicesSection() {
         <h2 className="text-4xl font-bold mb-12 text-center">Nuestros Servicios</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {serviceCategories.map((category, index) => (
-            <div key={index} className="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow">
+            <div key={index} className="card bg-base-100 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/40 transition-all duration-300">
               <div className="card-body">
                 <h3 className="card-title gap-2 text-primary">
                   {category.icon}
