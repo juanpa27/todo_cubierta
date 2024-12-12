@@ -35,7 +35,7 @@ export default function HeroSection() {
             que se adapta a tus necesidades.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/marcas" className="btn btn-primary btn-lg">
+            <Link href="/marcas" className="btn btn-primary dark:btn-primary btn-lg">
               Ver Marcas
             </Link>
             <Link

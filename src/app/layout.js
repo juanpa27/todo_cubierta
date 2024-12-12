@@ -27,7 +27,7 @@ export const metadata = {
     siteName: 'Todo Cubierta',
     images: [
       {
-        url: 'https://www.todocubierta.com/og-image.jpg', // Asegúrate de tener esta imagen en tu carpeta public
+        url: 'https://www.todocubierta.com/og-image.jpeg', // Asegúrate de tener esta imagen en tu carpeta public
         width: 1200,
         height: 630,
         alt: 'Todo Cubierta - Venta y Servicio de Neumáticos',
