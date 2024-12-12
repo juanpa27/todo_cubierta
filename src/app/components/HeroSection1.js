@@ -2,9 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { MessageCircleMore  } from 'lucide-react'
+import { MessageCircleMore } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function HeroSection() {
+  const whatsappMessage = encodeURIComponent(
+    "Hola, me gustaría obtener más información sobre sus servicios de cubiertas."
+  );
+  const whatsappLink = `https://api.whatsapp.com/send?phone=595985469000&text=${whatsappMessage}`;
+
   return (
     <section className="relative bg-base-100 overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -13,8 +19,9 @@ export default function HeroSection() {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="sm:text-center lg:text-left">
                 <h1 className="text-4xl font-oswald font-extrabold text-base-content sm:text-5xl md:text-6xl">
-                  <span className="block xl:inline text-shadow-glow">Todo Cubierta</span>{" "}
-                 
+                  <span className="block xl:inline text-shadow-glow">
+                    Todo Cubierta
+                  </span>{" "}
                 </h1>
                 <h2 className="text-3xl font-roboto font-bold text-primary sm:text-5xl md:text-6xl">
                   <span className="block text-primary xl:inline">
@@ -22,24 +29,24 @@ export default function HeroSection() {
                   </span>
                 </h2>
                 <p className="mt-3 text-base font-roboto text-base-content/70 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Te ofrecemos las mejores marcas, calidad garantizada y un servicio 
-                  que se adapta a tus necesidades.
+                  Te ofrecemos las mejores marcas, calidad garantizada y un
+                  servicio que se adapta a tus necesidades.
                 </p>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
-                    <Link href="/marcas" className="btn btn-primary">
+                    <Link href="/marcas" className="btn btn-primary hover:shadow-secondary/80 transition-all duration-300">
                       Ver Marcas
                     </Link>
                   </div>
                   <div className="mt-3 sm:mt-0 sm:ml-3">
                     <Link
-                      href="https://wa.me/1234567890"
+                      href={whatsappLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-outline btn-secondary flex items-center gap-2"
                     >
-                      <MessageCircleMore className="w-5 h-5" />
-                      Contáctanos
+                      <FaWhatsapp className="w-6 h-6" />
+                      Contáctanos por WhatsApp
                     </Link>
                   </div>
                 </div>
